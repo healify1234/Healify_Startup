@@ -1,20 +1,20 @@
-'use client'
-import Link from 'next/link'
-import { Search } from 'lucide-react'
+'use client';
+import Link from 'next/link';
+import { Search } from 'lucide-react';
 
 export default function Navbar() {
   return (
     <nav className="flex items-center justify-between px-8 py-4">
       <div className="flex items-center gap-4">
         <Link href="/" className="flex items-center gap-2">
-          <img src="https://static.wixstatic.com/media/469f62_add9d4ae57d14bbea9feedd53b36302e~mv2.png/v1/fill/w_96,h_98,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/469f62_add9d4ae57d14bbea9feedd53b36302e~mv2.png" alt="Healify" className="w-12 h-12" />
+          <img src="/images/logo.png" alt="Healify Logo" className="w-12 h-12" />
           <div>
             <h1 className="text-teal-600 text-2xl font-semibold">Healify</h1>
             <p className="text-teal-600 text-sm">Recover. Heal. Thrive</p>
           </div>
         </Link>
       </div>
-      
+
       <div className="flex items-center gap-6">
         <Link href="/" className="text-gray-600 hover:text-teal-600">Home</Link>
         <Link href="/programes" className="text-gray-600 hover:text-teal-600">Programes</Link>
@@ -24,7 +24,14 @@ export default function Navbar() {
       </div>
 
       <div className="flex items-center gap-4">
-        <button className="text-teal-600 hover:text-teal-700">Log In</button>
+        <div className="flex items-center gap-2">
+          <img 
+            src="https://as1.ftcdn.net/v2/jpg/04/23/62/52/1000_F_423625263_o6UWGjUchM3fyaKeGpT3842F386EH6Av.jpg" 
+            alt="Login Icon" 
+            className="w-6 h-6 rounded-full" 
+          />
+<Link href="/login" className="text-teal-600 hover:text-teal-700">Log In</Link>
+</div>
         <button className="bg-teal-600 text-white px-6 py-2 rounded-md hover:bg-teal-700">
           EXPLORE
         </button>
@@ -38,5 +45,5 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
-  )
+  );
 }
